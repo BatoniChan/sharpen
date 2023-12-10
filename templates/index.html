@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Sharpening App</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+</head>
+<body>
+    <h1>Image Sharpening App</h1>
+    <form action="/upload/" method="post" enctype="multipart/form-data">
+        <label for="file">Choose an image:</label>
+        <input type="file" name="file" accept="image/*" required>
+        <label for="rescale_factor">Rescale Factor (e.g., 0.75):</label>
+        <input type="number" name="rescale_factor" step="0.01" value="0.75" required>
+        <button type="submit">Sharpen Image</button>
+    </form>
+</body>
+</html>
